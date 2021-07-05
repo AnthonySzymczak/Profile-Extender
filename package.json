@@ -1,0 +1,28 @@
+{
+  "name": "profile-extender",
+  "version": "1.0.0",
+  "description": "A team profile generator",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "dependencies": {
+    "inquirer": "^8.1.1",
+    "jest": "^27.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnthonySzymczak/Profile-Extender.git"
+  },
+  "author": "Anthony Szymczak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AnthonySzymczak/Profile-Extender/issues"
+  },
+  "homepage": "https://github.com/AnthonySzymczak/Profile-Extender#readme"
+}
