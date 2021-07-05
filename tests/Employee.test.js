@@ -1,8 +1,12 @@
+//Welcome to the employee test!
+
+// Declaration require
 const Employee = require('../lib/Employee');
 
+//employee as object declaration
 test('Publishes employee (as object)', () => {
     const employee = new Employee();
-    expect(typeof(employee)).toBe("object");
+    expect(typeof(employee)).toBe('object');
 });
 
 // declares the employee's name
