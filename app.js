@@ -122,7 +122,7 @@ function aManager() {
   };
 
   // Function to populate intern information questions
-  function internQuestions() {
+  function aIntern() {
     const Questions = [
       {
           type: "input",
