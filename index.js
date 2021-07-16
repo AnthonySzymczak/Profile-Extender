@@ -1,20 +1,21 @@
 //Welcome to Profile Extender!
 
 // NPM packages require.
-const inq = require("inquirer");
 const fs = require("fs");
+const inq = require("inquirer");
 
 // Reference block
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
-
+const { writeFile } = require("./lib/Render");
+ 
 // Arrays for each employee block
 const internArr = [];
 const managerArr = [];
 const engineerArr = [];
 
-//Function to
+//Function to populate Manager information questions
 function aManager() {
   const Questions = [
     {
@@ -62,12 +63,12 @@ function aEmployee() {
     },
   ];
 
-  //next prompt population
+  //next prompt population then if no other employees are added, write file
   inq.prompt(nextEmployee).then((answers) => {
     if (answers.nextEmployee === "YES") {
       return getRole();
     } else {
-      renderHtml(managerArr, engineerArr, internArr);
+      writeFile(managerArr, engineerArr, internArr);
     }
   });
 }
@@ -161,6 +162,8 @@ function aIntern() {
     internArr.push(intern);
     aEmployee();
   });
-}
+};
+
+
 
 aManager();
